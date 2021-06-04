@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
+    Button button0;
     Button button1;
     Button button2;
     Button button3;
@@ -18,7 +19,9 @@ public class MenuActivity extends AppCompatActivity {
     Button button7;
     Button button8;
     Button button9;
-
+    Button aedfind_btn;
+    Button chestcompressionsguide_btn;
+    Button cprguide_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        button0 = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
@@ -36,6 +40,45 @@ public class MenuActivity extends AppCompatActivity {
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
+
+
+        aedfind_btn = findViewById(R.id.aedfind_btn);
+        chestcompressionsguide_btn = findViewById(R.id.chestcompressionsguide_btn);
+        cprguide_btn = findViewById(R.id.cprguide_btn);
+
+
+        aedfind_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        chestcompressionsguide_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, chestcompressionsguide.class);
+                startActivity(intent);
+            }
+        });
+
+        cprguide_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+        button0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, cprguide.class);
+                startActivity(intent);
+            }
+        });
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -39,7 +39,7 @@ public class chestcompressionsguide extends AppCompatActivity implements View.On
         aedfind_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(chestcompressionsguide.this, AEDActivity.class);
+                Intent intent = new Intent(chestcompressionsguide.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class chestcompressionsguide extends AppCompatActivity implements View.On
         cprguide_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(chestcompressionsguide.this, cprguide.class);
+                Intent intent = new Intent(chestcompressionsguide.this, MenuActivity.class);
                 startActivity(intent);
             }
 

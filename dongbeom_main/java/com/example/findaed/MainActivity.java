@@ -5,15 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton aed_btn;
-    ImageButton menu_btn;
-
+    Button aedfind_btn;
+    Button chestcompressionsguide_btn;
+    Button cprguide_btn;
 
 
 
@@ -21,32 +21,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        aedfind_btn=findViewById(R.id.aedfind_btn);
+        chestcompressionsguide_btn = findViewById(R.id.chestcompressionsguide_btn);
+        cprguide_btn = findViewById(R.id.cprguide_btn);
 
-        aed_btn=findViewById(R.id.aed_btn);
-        menu_btn = findViewById(R.id.menu_btn);
-
-        aed_btn.setOnClickListener(new View.OnClickListener() {
+        aedfind_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AEDActivity.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        menu_btn.setOnClickListener(new View.OnClickListener() {
+        chestcompressionsguide_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, chestcompressionsguide.class);
+                startActivity(intent);
+            }
+        });
+
+        cprguide_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
-
-
-
-
     }
 }

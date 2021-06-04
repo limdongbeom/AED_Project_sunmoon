@@ -21,8 +21,7 @@
         <activity android:name=".cprguide" />
         <activity android:name=".chestcompressionsguide" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".AEDActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -59,7 +59,7 @@
         app:layout_constraintLeft_toRightOf="@id/aedfind_btn"
         app:layout_constraintRight_toLeftOf="@id/chestcompressionsguide_btn"
         app:layout_constraintHorizontal_chainStyle="packed"
-        android:text="심폐소생술 가이드"/>
+        android:text="응급처치 메뉴얼"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:background="#AAD2E6"

@@ -5,54 +5,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/mainimg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:padding="0sp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/maintext1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/aed_btn"
-        />
 
-    <ImageButton
-        android:id="@+id/aed_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/mainimg"
-        app:layout_constraintBottom_toTopOf="@+id/menu_btn"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:src="@drawable/mainbtn1"
-        tools:ignore="ContentDescription"
-        android:padding="0sp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        />
-
-    <ImageButton
-        android:id="@+id/menu_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/aed_btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="#AAD2E6"
+        android:id="@+id/aedfind_btn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:src="@drawable/mainbtn2"
-        tools:ignore="ContentDescription"
-        android:padding="0sp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        />
+        app:layout_constraintRight_toLeftOf="@id/cprguide_btn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="aed 위치찾기" />
 
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="#AAD2E6"
+        android:id="@+id/cprguide_btn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/aedfind_btn"
+        app:layout_constraintRight_toLeftOf="@id/chestcompressionsguide_btn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="응급처치 메뉴얼"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="#AAD2E6"
+        android:id="@+id/chestcompressionsguide_btn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toRightOf="@id/cprguide_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="흉부압박 가이드" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
